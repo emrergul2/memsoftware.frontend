@@ -1,0 +1,23 @@
+"use client";
+
+import React, { useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../style/css/feather.css";
+import "../style/css/line-awesome.min.css";
+import "../style/scss/main.scss";
+import "../style/icons/fontawesome/css/fontawesome.min.css";
+import "../style/icons/fontawesome/css/all.min.css";
+
+export default function RootLayout( children) {
+    useEffect(() => {
+        import("bootstrap/dist/js/bootstrap.bundle.js");
+    }, []);
+
+    return (
+        <html>
+        <body>
+        {children}
+        </body>
+        </html>
+    );
+}
